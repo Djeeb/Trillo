@@ -18,6 +18,12 @@
     --line: 1px solid var(--color-grey-light-2);
 }
 
+$bp-largest: 75rem;     // 1200px/16px = 750px = 75rem;
+$bp-large: 68.75rem;    // 1100px/16px = 987.5px = 68.75rem;
+$bp-medium: 56.25rem;   // 900px/16px = 562.5px = 56.25rem;
+$bp-small: 37.5rem;     // 600px/16px = 375px = 37.5rem;
+$bp-smallest: 31.25rem;    // 500px/16px = 312.5px = 31.25rem;
+
 * {
     padding: 0;
     margin: 0;
@@ -32,6 +38,10 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
 }
 
 body {
